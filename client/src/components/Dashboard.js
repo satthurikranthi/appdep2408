@@ -16,7 +16,7 @@ function Dashboard() {
                 method: "DELETE",
             };
 
-            const url = `http://localhost:4567/deleteProfile?email=${encodeURIComponent(
+            const url = `/deleteProfile?email=${encodeURIComponent(
                 storeObj?.loginDetails?.email
             )}`;
 
@@ -89,7 +89,7 @@ function Dashboard() {
 
             {storeObj?.loginDetails?.profilepic && (
                 <img
-                    src={`http://localhost:4567/${storeObj.loginDetails.profilepic}`}
+                    src={`/${storeObj.loginDetails.profilepic}`}
                     alt="Profile"
                 />
             )}

@@ -12,7 +12,7 @@ function Login() {
     let navigate = useNavigate();
     let dispatch = useDispatch();
 
-    axios.defaults.baseURL = "http://localhost:4567";
+    axios.defaults.baseURL = "";
 
     useEffect(() => {
        if(localStorage.getItem("token")){
@@ -65,7 +65,7 @@ if (response.status === "failure") {
         };
     
         try {
-            const response = await fetch("http://localhost:4567/validateToken", reqOptions);
+            const response = await fetch("/validateToken", reqOptions);
             const data = await response.json();
     
             console.log(data); // Log to check the response structure
@@ -103,7 +103,7 @@ if (response.status === "failure") {
         };
 
         try {
-            const response = await fetch("http://localhost:4567/login", reqOptions);
+            const response = await fetch("/login", reqOptions);
             const data = await response.json();
             console.log(data);
 
